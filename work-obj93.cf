@@ -1,0 +1,40 @@
+v 4
+file . "processador_tb.vhd" "e872a80d0446e389baad1fe8f0eecb0a0b58615e" "20250212004229.661":
+  entity processador_tb at 1( 0) + 0 on 701;
+  architecture a_processador_tb of processador_tb at 8( 108) + 0 on 702;
+file . "instruction_reg.vhd" "3e29057e8fe39c866dd0f24affe9d232bc5e5202" "20250212004229.555":
+  entity instruction_reg at 1( 0) + 0 on 695;
+  architecture a_instruction_reg of instruction_reg at 16( 305) + 0 on 696;
+file . "maquina_estados.vhd" "9d523ee835df3b2baaf44e4dd2d1abb81fcf202f" "20250212004229.486":
+  entity maquina_estados at 1( 0) + 0 on 691;
+  architecture a_maquina_estados of maquina_estados at 13( 229) + 0 on 692;
+file . "PC.vhd" "c6090fadc8c61c8952ae0fbcb1b871a2d80477e4" "20250212004229.411":
+  entity pc at 1( 0) + 0 on 687;
+  architecture a_pc of pc at 16( 292) + 0 on 688;
+file . "ROM.vhd" "3ae18729dfd52e87c2db2fc6ea59d6c00e6c2f0e" "20250212004229.336":
+  entity rom at 1( 0) + 0 on 683;
+  architecture a_rom of rom at 13( 231) + 0 on 684;
+file . "reg16bits.vhd" "61900a639d4eb1d6ac2699a25f9ea2ee70c65dd1" "20250212004229.262":
+  entity reg16bits at 1( 0) + 0 on 679;
+  architecture a_reg16bits of reg16bits at 16( 299) + 0 on 680;
+file . "ULA.vhd" "9a8dadfe45c9c6bd511e131155b57bb170e94215" "20250212004229.218":
+  entity ula at 1( 0) + 0 on 677;
+  architecture a_ula of ula at 18( 433) + 0 on 678;
+file . "reg_bank.vhd" "8a49670a8b4f4052fd773b52e7cbc3a43d28607a" "20250212004229.299":
+  entity reg_bank at 1( 0) + 0 on 681;
+  architecture a_reg_bank of reg_bank at 21( 611) + 0 on 682;
+file . "reg1bit.vhd" "36c828b40f1f119fc1a99e20689e33507fd44161" "20250212004229.374":
+  entity reg1bit at 1( 0) + 0 on 685;
+  architecture a_reg1bit of reg1bit at 16( 273) + 0 on 686;
+file . "PC_adder.vhd" "989ce6313a45e7eeff70eac04cd5efdce507ae2b" "20250212004229.448":
+  entity pc_adder at 1( 0) + 0 on 689;
+  architecture a_pc_adder of pc_adder at 18( 436) + 0 on 690;
+file . "UC.vhd" "485f3d7c5aa344a5dc1c6f2bfffc32b371221503" "20250212004229.526":
+  entity uc at 1( 0) + 0 on 693;
+  architecture a_uc of uc at 43( 1484) + 0 on 694;
+file . "processador.vhd" "6150bab57d31d8abe3fc237cf5827ae2b1033ada" "20250212004229.622":
+  entity processador at 1( 0) + 0 on 699;
+  architecture a_processador of processador at 20( 624) + 0 on 700;
+file . "ram.vhd" "112ad516ec314db0acc579ab7fdedda5e92a50ff" "20250212004229.585":
+  entity ram at 1( 0) + 0 on 697;
+  architecture a_ram of ram at 15( 462) + 0 on 698;

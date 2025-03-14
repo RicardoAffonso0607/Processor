@@ -1,0 +1,152 @@
+Assembly:
+
+0	LD    R1, 2	# Contador
+1	LD    R2, 94
+
+2	SW    R1, 0(R2)
+
+3	LD    A, 1	# R2++
+4	ADD   A, R2
+5	MOV   R2, A	# R2++
+
+6	LD    A, 1	# R1++
+7	ADD   A, R1
+8	MOV   R1, A	# R1++
+
+9	LD    A, 32	# condição loop
+10	CMPI  R1, A
+11	BLE   -9
+
+
+
+# Inicialização de variáveis para o proximo loop
+
+12	LD    R0, 2
+13	LD    R1, 1
+14	LD    R2, 96
+15	LD    R3, -1
+16	LD    R4, 94
+
+# Loop interno 1 para retirar os números não primos
+
+17	SW    R3, 0(R2)	# Volta aqui (loop interno 1 e loop externo)
+
+18	MOV   A, R2	# R2+=R0
+19	ADD   A, R0
+20	MOV   R2, A	# R2+=R0
+
+21	LD    A, 124	# condição loop interno 1
+22	CMPI  R2, A
+23	BLE   -6	    # condição loop interno 1
+
+
+# Loop interno 2 para procurar a nova incrementação
+
+24	LD    A, 1	# Volta aqui (loop interno 2)
+25	ADD   A, R4
+26	MOV   R4, A	# R4++
+27	LW    R5, 0(R4)
+
+28	LD    A, 0	# condição loop interno 2
+29	CMPI  R5, A
+30	BMI   -6	# condição loop interno 2
+
+31	MOV   R0, R5	# Nova incrementação (R0 = 3,5,... nesse caso vai só até 5)
+
+
+32	MOV   A, R4	# Novo início do loop interno 1
+33	ADD   A, R0
+34	MOV   R2, A	# Novo início do loop interno 1
+
+35	LD    A, 1	# R1++
+36	ADD   A, R1
+37	MOV   R1, A	# R1++
+
+
+38	LD    A, 3	# Condição loop externo
+39	CMPI  R1, A
+40	BLE   -20	# Condição loop externo
+
+
+
+
+# Inicialização de variáveis para o proximo loop
+
+41	LD    R1, 0	
+42	LD    R4, 94
+
+# Loop para passar todos os primos até 31 pras posições iniciais da RAM em ordem crescente um atrás do outro
+
+43	LW    R0, 0(R4)	# Volta aqui
+
+44	LD    A, 1	# R4++
+45	ADD   A, R4
+46	MOV   R4, A	# R4++
+
+47	LD    A, 0	# if (R0 >= 0)
+48	CMPI  R0, A
+49	BMI   -6	# if (R0 >= 0)
+
+# {
+
+50	SW    R0, 0(R1)
+
+51	LD    A, 1	# R1++
+52	ADD   A, R1
+53	MOV   R1, A	# R1++
+
+# }
+
+54	LD    A, 30	# Condição loop
+55	CMPI  R0, A
+56	BLE   -13	# Condição loop
+
+
+
+# Inicialização de variáveis para o proximo loop
+
+57	LD    R1, 0
+58	LD    R4, 94
+
+# Loop para passar os números primos para a posição 94 em diante da RAM
+
+59	LW    R2, 0(R1)	# Volta aqui
+60	SW    R2, 0(R4)
+
+61	LD    A, 1	# R1++
+62	ADD   A, R1
+63	MOV   R1, A	# R1++
+
+64	LD    A, 1	# R4++
+65	ADD   A, R4
+66	MOV   R4, A	# R4++
+
+67	LD    A, 30	# Condição loop
+68	CMPI  R2, A
+69	BLE   -10	# Condição loop
+
+
+
+# Inicialização de variáveis para o proximo loop
+
+70	LD    R1, 94
+
+# Loop para mostrar a sequência de números primos
+
+71	LW    R0, 0(R1)	# Volta aqui
+
+72	LD    A, 1	# R1++
+73	ADD   A, R1
+74	MOV   R1, A	# R1++
+
+75	LD    A, 30	# Condição loop
+76	CMPI  R0, A
+77	BLE   -6	# Condição loop
+
+
+
+
+
+Código de Máquina:
+
+
